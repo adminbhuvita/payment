@@ -1,23 +1,26 @@
 .payment-container {
   display: flex;
-  width: 100%;
-  max-width: 1500px;
-  margin: 20px auto;
+  position: relative;
+  overflow: visible;
+  align-items: center;
+  height: auto;
   flex-direction: row;
-  background: #dae7f4;
+  background: #fff;
+  justify-content: center;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  gap: 0;
 }
 
 .payment-left {
-  width: 50%;
+  width: 55%;
+  height: 50%;
   padding: 24px;
-  background: white;
+  background: #fff;
   display: flex;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   flex-direction: column;
-  gap: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  gap: 0;
 }
 
 
@@ -87,7 +90,7 @@
 
 .card-label {
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: bold;
   color: black;
 }
 
@@ -116,7 +119,7 @@
   border: 1px solid #ddd;
   padding: 12px;
   border-radius: 8px;
-  margin-top: 8px;
+  margin-bottom: 10px;
   background: #f8f8f8;
 }
 
@@ -147,7 +150,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 30px;
   width: 100%;
 }
 
@@ -157,12 +160,13 @@
   flex-direction: column;
   gap: 1px;
   
+  
 }
 
 .cvv-label label {
   font-size: 0.875rem;
-  font-weight: 600;
-  color: #333;
+  font-weight: bold;
+  color: black;
  
 }
 
@@ -343,94 +347,108 @@
 
  /* Payment right section */
  .payment-right {
-  width: 30%;
-  background: #e3efff;
+  width: 25%;
+  height: 55%;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  background: #fff;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 30px;
+  gap: 0;
 }
 
+.payment-box{
+  position: relative;
+  background: #eef3f7;
+  width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+  margin-bottom: 40px;
 
-.card-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f5f5f5;
 }
 
 .payment-card {
-  width: 250px;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 140px;
   background: white;
   border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);  
   padding: 15px;
+  text-align: left;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
 }
 
 .card-header {
-  width: 100%;
-  height: 5px;
-  border-radius: 10px 10px 0 0;
-}
-
-.card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.card-top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .chip {
-  width: 50px;
-  height: 60px;
-  background: url("https://t3.ftcdn.net/jpg/01/22/06/72/360_F_122067257_5AgUCMTXjmiT8XQnqr6maZmEKQMVw3dr.jpg") no-repeat center;
-  background-size: contain;}
-
-.contactless {
-  width: 30px;
-  height: 40px;
-  background: url("https://www.shutterstock.com/image-vector/wifi-icon-black-wi-fi-260nw-654893110.jpg") no-repeat center;
-  background-size: contain;
+  width: 40px;
+  height: 30px;
+  background: gold;
+  border-radius: 5px;
 }
 
-.card-holder {
-  font-size: 0.9rem;
-  color: #555;
-  font-weight: bold;
+.wifi-icon {
+  font-size: 20px;
+  color: gray;
 }
 
-.card-number {
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card-expiry {
-  font-size: 0.8rem;
-  color: #666;
+.card-details {
+  font-size: 14px;
 }
 
 .card-logo {
-  width: 30px;
-  height: 20px;
+  font-size: 30px;
+  color: #eb001b;
 }
 
-.mastercard {
-  background: url("https://upload.wikimedia.org/wikipedia/commons/b/b7/MasterCard_Logo.svg") no-repeat center;
-  background-size: contain;
+.payment-summary {
+  margin-top: 120px;
+  background: #eef3f7;
+  padding: 5px;
+  border-radius: 10xp;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.bold {
+  font-weight: bold;
+  color: #1B2330;
+}
+
+.company-name {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.company-icon {
+  font-size: 16px;
+}
+
+.total-amount p {
+  margin-top: 15px;
+  
+}
+
+
+.total-amount h2 {
+  color: #2242a4;
+  
 }

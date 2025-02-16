@@ -2,6 +2,13 @@ import React from "react";
 import { MdEdit, MdOutlineVerified } from "react-icons/md";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import { BsFillGrid3X3GapFill, BsGrid3X3Gap } from "react-icons/bs";
+import { FaWifi } from "react-icons/fa";
+import { SiMastercard } from "react-icons/si";
+import { FaApple } from "react-icons/fa";
+
+
+
+
 import "./Payment.css";
 
 
@@ -91,25 +98,51 @@ const Payment = () => {
         </div>
       </div>
       <div className="payment-right">
-        <div className="card-container">
+        <div className="payment-box">
           <div className="payment-card">
-            <div className="card-header"></div>
-            <div className="card-body">
-              <div className="card-top">
-                <div className="chip"></div>
-                <div className="contactless"></div>
-              </div>
-              <div className="card-holder">Jonathon Micheal</div>
-              <div className="card-number">•••• 3456</div>
-              <div className="card-footer">
-                <span className="card-expiry">09/22</span>
-                <div className="card-logo mastercard"></div>
-              </div>
+            <div className="card-header">
+              <div className="chip"></div>
+              <FaWifi className="wifi-icon" />
             </div>
+            <div className="card-details">
+              <p className="card-holder">Jonathon Michael</p>
+              <p className="card-number">**** 3456</p>
+              <p className="expiry-date">09/22</p>
+              
+            </div>
+            <SiMastercard className="card-logo"/>
           </div>
+          {/* Payment Summary */}
+          <div className="payment-summary">
+            <div className="summary-item">
+              <span>Company</span>
+              <span className="company-name">
+                <FaApple className="company-icon" /> Apple
+              </span>
+            </div>
+            <div className="summary-item">
+              <span>Order Number</span>
+              <span>1266201</span>
+            </div>
+            <div className="summary-item">
+              <span>Product</span>
+              <span className="bold">MacBook Air</span>
+            </div>
+            <div className="summary-item">
+              <span>VAT (20%)</span>
+              <span className="bold">$100.00</span>
+            </div>
+            <p className="line">---------------------------------------------</p>
+          </div>
+          <div className="total-amount">
+            <p>You have to Pay</p>
+            <h2>549.99 USD</h2>
+            
+          </div>
+      
         </div>
         
-
+         
       </div>
     </div>
   );
